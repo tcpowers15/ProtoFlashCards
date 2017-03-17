@@ -35,7 +35,7 @@ public class deck {
         c1.setBack(back);
 
         this.deck.add(idCounter, c1);
-
+        this.idCounter ++;
     }
 
 
