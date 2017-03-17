@@ -9,7 +9,7 @@ public class deck {
     private int idCounter = 0;
     private String name;
     private String description;
-    private ArrayList deck;
+    private ArrayList <Card> deck;
 
 
 
@@ -23,13 +23,20 @@ public class deck {
 
         this.name = name;
         this.description = description;
-        this.deck = new ArrayList();
+        this.deck = new <Card> ArrayList();
 
     }
 
 
 
+    public void addCard(String front, String back){
+        Card c1 = new Card(idCounter);
+        c1.setFront(front);
+        c1.setBack(back);
 
+        this.deck.add(idCounter, c1);
+        this.idCounter ++;
+    }
 
 
 }
